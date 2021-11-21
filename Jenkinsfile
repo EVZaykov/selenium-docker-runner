@@ -12,16 +12,11 @@ pipeline{
 				bat 'docker-compose up testngFirst testngSecond'
 			}
 		}
-		stage('Stop Grid'){
-			steps{
-				bat 'docker-compose down'
-			}
-		}
 	}
 	post{
 		always{
 			archiveArtifacts artifacts: 'output/**'
+			bat 'docker-compose down'
 		}
 	}
-
 }
