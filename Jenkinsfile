@@ -3,8 +3,8 @@ pipeline{
 	stages{
 		stage("Run Test"){
 			steps{
-				ls -al
-				docker-compose up
+				echo 'ls -al'
+				echo 'docker-compose up'
 			}
 		}
 		stage("Bring Grid Down"){
