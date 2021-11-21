@@ -4,7 +4,7 @@ pipeline{
 		stage('Start Grid'){
 			steps {
 				bat 'docker-compose up -d hub chrome firefox'
-				bat 'docker ps'
+				bat 'docker images'
 			}
 		}
 		stage('Run Test'){
