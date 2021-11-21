@@ -3,7 +3,7 @@ pipeline{
 	stages{
 		stage("Run Test"){
 			steps{
-				sh 'ls'
+				sh 'echo "Started...!" '
 				sh 'docker-compose up'
 			}
 		}
