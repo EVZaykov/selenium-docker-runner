@@ -18,5 +18,10 @@ pipeline{
 			}
 		}
 	}
+	post{
+		always{
+			archiveArtifacts artifacts: 'output/**'
+		}
+	}
 
 }
