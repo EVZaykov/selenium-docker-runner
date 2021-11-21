@@ -1,8 +1,8 @@
 pipeline{
 	agent any
-	stages{
-		stage("Run Test"){
-			steps{
+	stages {
+		stage('Run Test'){
+			steps {
 				sh 'echo "Started...!" '
 				sh 'docker-compose up'
 			}
