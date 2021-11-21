@@ -18,7 +18,7 @@ services:
     environment:
       - HUB_HOST=hub
   testngFirst:
-    image: javaautotesting/zaikov
+    image: javaautotesting/zaikov:zaikov
     depends_on:
       - chrome
       - firefox
@@ -29,7 +29,7 @@ services:
     volumes:
       - ./testngFirst-result:/user/zaikov/test-output
   testngSecond:
-    image: javaautotesting/zaikov
+    image: javaautotesting/zaikov:zaikov
     depends_on:
       - chrome
       - firefox
