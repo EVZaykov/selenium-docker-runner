@@ -25,7 +25,7 @@ services:
       - HUB_HOST=hub
       - MODULE=testngFirst.xml
     volumes:
-      - ./testngFirst-result:/user/zaikov/test-output
+      - ./output/testngFirst-result:/user/zaikov/test-output
   testngSecond:
     image: javaautotesting/zaikov:zaikov
     depends_on:
@@ -36,4 +36,4 @@ services:
       - HUB_HOST=hub
       - MODULE=testngSecond.xml
     volumes:
-      - ./testngSecond-result:/user/zaikov/test-output
+      - ./output/testngSecond-result:/user/zaikov/test-output
